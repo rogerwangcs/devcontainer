@@ -3,8 +3,6 @@ services:
   app:
     container_name: "application-server"
     image: lscr.io/linuxserver/libreoffice:latest
-      security_opt:
-      - seccomp:unconfined #optional
     restart: always
     volumes:
       - ..:/workspace:cached
@@ -24,6 +22,7 @@ services:
       - /dev/fuse
     security_opt:
       - apparmor:unconfined
+      - seccomp:unconfined #optional
 networks:
   app-network:
     external: true
