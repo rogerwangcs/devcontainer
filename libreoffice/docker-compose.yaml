@@ -8,7 +8,7 @@ services:
     restart: always
     volumes:
       - ..:/workspace:cached
-      - work:/home/libreoffice
+      - work:/config
     ports:
       - 3000:3000
       - 3001:3001
