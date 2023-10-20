@@ -1,0 +1,10 @@
+{
+  "name": "Workbench app",
+  "dockerComposeFile": "docker-compose.yaml",
+  "service": "app",
+  "shutdownAction": "none",
+  // Open the sub-folder with the source code
+  "workspaceFolder": "/workspace/workbench",
+  "postCreateCommand": ["../post-startup.sh", "workbench", "/home/workbench"],
+  "remoteUser": "root"
+}
