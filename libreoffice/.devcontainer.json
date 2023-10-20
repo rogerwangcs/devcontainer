@@ -1,0 +1,10 @@
+{
+  "name": "LibreOffice app",
+  "dockerComposeFile": "docker-compose.yaml",
+  "service": "app",
+  "shutdownAction": "none",
+  // Open the sub-folder with the source code
+  "workspaceFolder": "/workspace/libreoffice",
+  "postCreateCommand": ["../post-startup.sh", "libreoffice", "/home/libreoffice"],
+  "remoteUser": "root"
+}
